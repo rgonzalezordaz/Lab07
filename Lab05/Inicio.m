@@ -7,6 +7,7 @@
 //
 
 #import "Inicio.h"
+#import <DigitsKit/DigitsKit.h>
 
 @interface Inicio ()
 @property NSMutableArray *destinationTitles;
@@ -24,6 +25,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initController];
+    
+    DGTAuthenticateButton *authButton;
+    authButton = [DGTAuthenticateButton buttonWithAuthenticationCompletion:^(DGTSession *session, NSError *error) {
+        if (session.userID) {
+            // TODO: associate the session userID with your user model
+            NSString *msg = [NSString stringWithFormat:@"Phone number: %@", session.phoneNumber];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You are logged in!"
+                                                            message:msg
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else if (error) {
+            NSLog(@"Authentication error: %@", error.localizedDescription);
+        }
+    }];
+    authButton.center = self.view.center;
+    [self.view addSubview:authButton];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

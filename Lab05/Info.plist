@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>googlechromes</string>
-		<string>comgooglemaps</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -25,8 +20,38 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>8034c6832f4aaa6fda0f17bde951d9d5fb44dee5</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>JBl2mY7fAZd5bxXk4NaeeEdx7</string>
+					<key>consumerSecret</key>
+					<string>7ET6WhVXKePpsHw6BuZbUGdhKgZxSFr0J3kH2h8cwf0PCL1mcp</string>
+				</dict>
+				<key>KitName</key>
+				<string>Digits</string>
+			</dict>
+		</array>
+	</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Pushwoosh_APPID</key>
+	<string>ECD1E-48B75</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

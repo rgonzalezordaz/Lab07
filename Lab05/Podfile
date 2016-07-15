@@ -6,4 +6,5 @@ project '/Users/Ricardo/Documents/Xcode Codes/Lab05/Lab05.xcodeproj'
 target 'Lab05' do
 pod 'GoogleMaps'
 pod 'Google/Analytics'
+pod 'Pushwoosh'
 end
